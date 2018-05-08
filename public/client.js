@@ -94,7 +94,10 @@ var view = {
     }
   },
   createDeleteButton: function() {
-    var deletebutton = document.createElement
+    var deletebutton = document.createElement('button');
+    deletebutton.textContent = 'Delete';
+    deletebutton.className = 'deletebutton';
+    return deletebutton;
 };
 
 

@@ -90,6 +90,7 @@ var view = {
       }
       
       todoLi.textContent = todoTextWithCompletion;
+      todoLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todoLi);
     }
   },
@@ -98,6 +99,7 @@ var view = {
     deletebutton.textContent = 'Delete';
     deletebutton.className = 'deletebutton';
     return deletebutton;
+  }
 };
 
 

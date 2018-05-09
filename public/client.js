@@ -100,11 +100,12 @@ var view = {
     return deletebutton;
   },
   setupEventListeners: function() {
-      var todoUl = document.querySelector('ul');
+      
+      var todosUl = document.querySelector('ul');
  
-      todoUl.addEventListener('click', function(event) {
+      todosUl.addEventListener('click', function(event) {
       var elementClicked = event.target;  
-      if (elementClicked.className === 'deleteButton') {
+      if (elementClicked.className === 'deletebutton') {
          handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
        }
 

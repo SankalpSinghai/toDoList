@@ -105,9 +105,8 @@ var todoUl = document.querySelector('ul');
 
 todoUl.addEventListener('click', function(event) {
 var elementClicked = event.target;  
-if(elementClicked.className === 'deleteButton') {
-  
-  Handlers.deletetodo(parseInt(elementClicked.parentNode.id)
+if (elementClicked.className === 'deleteButton') {
+   handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
  }
                       
 });

@@ -98,20 +98,21 @@ var view = {
     deletebutton.textContent = 'Delete';
     deletebutton.className = 'deletebutton';
     return deletebutton;
+  },
+  setupEventListeners: function() {
+      var todoUl = document.querySelector('ul');
+ 
+      todoUl.addEventListener('click', function(event) {
+      var elementClicked = event.target;  
+      if (elementClicked.className === 'deleteButton') {
+         handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+       }
+
+    });
   }
 };
 
-var todoUl = document.querySelector('ul');
-
-todoUl.addEventListener('click', function(event) {
-var elementClicked = event.target;  
-if (elementClicked.className === 'deleteButton') {
-   handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
- }
-                      
-});
-
-
+view.setupEventListeners();
 
 
 
